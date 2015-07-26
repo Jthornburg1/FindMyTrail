@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetailViewController.h
 //  FindMyTrail
 //
 //  Created by jonathan thornburg on 7/21/15.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Trail.h"
 
-@interface ViewController : UIViewController
+@interface DetailViewController : UIViewController
 
+@property (strong, nonatomic) Trail *trail;
 
 @end
-
