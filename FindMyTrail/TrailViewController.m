@@ -71,12 +71,12 @@
     
     Trail *trail = self.trails[indexPath.row];
     
-    cell.textLabel.text = trail.name;
+    cell.trailNameLabel.text = trail.name;
     
     if (trail.state == (id)[NSNull null]) {
-        cell.detailTextLabel.text = @"N/A";
+        cell.cityLabel.text = [NSString stringWithFormat:@"%@, N/A", trail.city];
     }else{
-        cell.detailTextLabel.text = trail.state;
+        cell.cityLabel.text = [NSString stringWithFormat:@"%@, %@", trail.city, trail.state];
 
     }
     

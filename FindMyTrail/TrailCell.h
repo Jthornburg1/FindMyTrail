@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TrailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *trailNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 
 @end

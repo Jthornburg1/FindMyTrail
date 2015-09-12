@@ -17,17 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lmn-UX-t3V">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lmn-UX-t3V">
                                 <rect key="frame" x="16" y="314" width="563" height="266"/>
-                                <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trailCell" id="bSa-dS-6tD" customClass="TrailCell">
                                         <rect key="frame" x="0.0" y="0.0" width="563" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSa-dS-6tD" id="IEG-3A-NGf">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-Ef-A84">
+                                                    <rect key="frame" x="8" y="8" width="81" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm2-ma-VCs">
+                                                    <rect key="frame" x="8" y="54" width="31" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tgA-Ef-A84" firstAttribute="leading" secondItem="IEG-3A-NGf" secondAttribute="leadingMargin" id="0eO-hn-AvQ"/>
+                                                <constraint firstItem="tgA-Ef-A84" firstAttribute="top" secondItem="IEG-3A-NGf" secondAttribute="topMargin" id="GgU-7b-sJv"/>
+                                                <constraint firstItem="tgA-Ef-A84" firstAttribute="leading" secondItem="Nm2-ma-VCs" secondAttribute="leading" id="JDY-D2-BKy"/>
+                                                <constraint firstItem="Nm2-ma-VCs" firstAttribute="leading" secondItem="IEG-3A-NGf" secondAttribute="leadingMargin" id="Wvo-3J-J6d"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Nm2-ma-VCs" secondAttribute="bottom" id="Xah-3P-EPp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cityLabel" destination="Nm2-ma-VCs" id="cI3-bF-uNp"/>
+                                            <outlet property="trailNameLabel" destination="tgA-Ef-A84" id="iP1-af-SaQ"/>
                                             <segue destination="Y3a-7w-BZi" kind="show" identifier="pushDirections" id="5v2-Y1-NNa"/>
                                         </connections>
                                     </tableViewCell>
@@ -44,7 +67,7 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter city name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpB-8p-YrU">
                                 <rect key="frame" x="167" y="64" width="261" height="30"/>
-                                <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="261" id="t87-yp-0LN"/>
                                 </constraints>
@@ -73,7 +96,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823531269999999" green="0.1215686351" blue="0.5647059083" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VXR-k7-alP" firstAttribute="centerX" secondItem="zpB-8p-YrU" secondAttribute="centerX" constant="113.5" id="15M-CZ-DYm"/>
                             <constraint firstItem="lmn-UX-t3V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="1bT-IT-V2i"/>
