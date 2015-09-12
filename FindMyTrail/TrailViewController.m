@@ -26,6 +26,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
+    if (selected) {
+        [self.tableView deselectRowAtIndexPath:selected animated:YES];
+    }
+}
+
 - (IBAction)clearButtonTapped:(id)sender {
     self.cityText.text = @"";
 }
