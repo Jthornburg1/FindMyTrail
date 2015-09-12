@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D269357A1BA4BDBB00911EE0 /* TrailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D26935791BA4BDBB00911EE0 /* TrailCell.m */; };
 		D2C06DF21B5EC29500C09998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06DF11B5EC29500C09998 /* main.m */; };
 		D2C06DF51B5EC29500C09998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06DF41B5EC29500C09998 /* AppDelegate.m */; };
 		D2C06DF81B5EC29500C09998 /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06DF71B5EC29500C09998 /* TrailViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D26935781BA4BDBB00911EE0 /* TrailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailCell.h; sourceTree = "<group>"; };
+		D26935791BA4BDBB00911EE0 /* TrailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailCell.m; sourceTree = "<group>"; };
 		D2C06DEC1B5EC29500C09998 /* FindMyTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C06DF01B5EC29500C09998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C06DF11B5EC29500C09998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				D2C06DF41B5EC29500C09998 /* AppDelegate.m */,
 				D2C06DF61B5EC29500C09998 /* TrailViewController.h */,
 				D2C06DF71B5EC29500C09998 /* TrailViewController.m */,
+				D26935781BA4BDBB00911EE0 /* TrailCell.h */,
+				D26935791BA4BDBB00911EE0 /* TrailCell.m */,
 				D2C06E181B5EC2EA00C09998 /* TrailController.h */,
 				D2C06E191B5EC2EA00C09998 /* TrailController.m */,
 				D2C06E151B5EC2D800C09998 /* Trail.h */,
@@ -237,6 +242,7 @@
 			files = (
 				D2C06DF81B5EC29500C09998 /* TrailViewController.m in Sources */,
 				D2C06E1A1B5EC2EA00C09998 /* TrailController.m in Sources */,
+				D269357A1BA4BDBB00911EE0 /* TrailCell.m in Sources */,
 				D2C06DF51B5EC29500C09998 /* AppDelegate.m in Sources */,
 				D2C06E171B5EC2D800C09998 /* Trail.m in Sources */,
 				D2C06DF21B5EC29500C09998 /* main.m in Sources */,

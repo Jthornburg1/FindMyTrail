@@ -9,6 +9,7 @@
 #import "TrailViewController.h"
 #import "TrailController.h"
 #import "DetailViewController.h"
+#import "TrailCell.h"
 
 @interface TrailViewController ()<UITableViewDataSource, UITextFieldDelegate>
 
@@ -64,9 +65,9 @@
 
 #pragma mark - TableView DataSource methods
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (TrailCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"trailCell"];
+    TrailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"trailCell"];
     
     Trail *trail = self.trails[indexPath.row];
     
