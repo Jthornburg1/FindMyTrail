@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSString *country;
 @property (strong, nonatomic) NSString *described;
 @property (strong, nonatomic) NSString *directions;
+@property (strong, nonatomic) NSString *activities;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end

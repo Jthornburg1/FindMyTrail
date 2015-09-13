@@ -7,6 +7,7 @@
 //
 
 #import "TrailCell.h"
+#import "Trail.h"
 
 @implementation TrailCell
 

@@ -11,5 +11,5 @@
 @interface TrailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *trailNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
-
+@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
 @end

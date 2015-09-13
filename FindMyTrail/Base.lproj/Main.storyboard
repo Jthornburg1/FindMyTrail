@@ -27,28 +27,44 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSa-dS-6tD" id="IEG-3A-NGf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-Ef-A84">
-                                                    <rect key="frame" x="8" y="8" width="81" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm2-ma-VCs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nm2-ma-VCs">
                                                     <rect key="frame" x="8" y="54" width="31" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-Ef-A84">
+                                                    <rect key="frame" x="8" y="8" width="202" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="202" id="0d9-q7-M3J"/>
+                                                        <constraint firstAttribute="width" constant="202" id="Qc6-vh-UzS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AAl-Yz-iYA">
+                                                    <rect key="frame" x="503" y="8" width="52" height="67"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="52" id="dHR-Ut-hGc"/>
+                                                        <constraint firstAttribute="height" constant="67" id="zeh-s3-SrU"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="tgA-Ef-A84" firstAttribute="leading" secondItem="IEG-3A-NGf" secondAttribute="leadingMargin" id="0eO-hn-AvQ"/>
                                                 <constraint firstItem="tgA-Ef-A84" firstAttribute="top" secondItem="IEG-3A-NGf" secondAttribute="topMargin" id="GgU-7b-sJv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AAl-Yz-iYA" secondAttribute="trailing" id="GpN-9K-Ala"/>
                                                 <constraint firstItem="tgA-Ef-A84" firstAttribute="leading" secondItem="Nm2-ma-VCs" secondAttribute="leading" id="JDY-D2-BKy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AAl-Yz-iYA" secondAttribute="trailing" id="McC-BZ-yRL"/>
+                                                <constraint firstItem="AAl-Yz-iYA" firstAttribute="top" secondItem="IEG-3A-NGf" secondAttribute="topMargin" id="PDB-vV-TTy"/>
                                                 <constraint firstItem="Nm2-ma-VCs" firstAttribute="leading" secondItem="IEG-3A-NGf" secondAttribute="leadingMargin" id="Wvo-3J-J6d"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Nm2-ma-VCs" secondAttribute="bottom" id="Xah-3P-EPp"/>
+                                                <constraint firstItem="AAl-Yz-iYA" firstAttribute="bottom" secondItem="IEG-3A-NGf" secondAttribute="bottomMargin" id="YzS-Pt-cyC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellImage" destination="AAl-Yz-iYA" id="jFs-Y9-O1k"/>
                                             <outlet property="cityLabel" destination="Nm2-ma-VCs" id="cI3-bF-uNp"/>
                                             <outlet property="trailNameLabel" destination="tgA-Ef-A84" id="iP1-af-SaQ"/>
                                             <segue destination="Y3a-7w-BZi" kind="show" identifier="pushDirections" id="5v2-Y1-NNa"/>

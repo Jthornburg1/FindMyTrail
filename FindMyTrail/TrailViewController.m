@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSArray *trails;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) TrailController *trailController;
+@property (strong, nonatomic) NSArray *cellImages;
 
 @end
 
@@ -24,7 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.cellImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"WasatchStru"], [UIImage imageNamed:@"bigwhiteandgreen"], [UIImage imageNamed:@"earlyspring"], [UIImage imageNamed:@"fruita flowers"], [UIImage imageNamed:@"FruitaCanyon"], [UIImage imageNamed:@"redFlowers"], [UIImage imageNamed:@"SLCTrail"], [UIImage imageNamed:@"whiteandgreen"], nil];
+    
+
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -76,9 +81,11 @@
     if (trail.state == (id)[NSNull null]) {
         cell.cityLabel.text = [NSString stringWithFormat:@"%@, N/A", trail.city];
     }else{
-        cell.cityLabel.text = [NSString stringWithFormat:@"%@, %@", trail.city, trail.state];
+        cell.cityLabel.text = [NSString stringWithFormat:@"%@", trail.state];
 
     }
+    
+    cell.cellImage.image = self.cellImages[arc4random_uniform(self.cellImages.count)];
     
     return cell;
 }
