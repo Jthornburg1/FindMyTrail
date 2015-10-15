@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Trail.h"
 
-@interface TrailCell : UITableViewCell
+@interface TrailCell : UITableViewCell<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *trailNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *cellImage;
+@property (strong, nonatomic) Trail *trail;
+
+
 @end

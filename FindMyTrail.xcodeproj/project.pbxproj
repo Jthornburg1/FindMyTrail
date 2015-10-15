@@ -18,6 +18,8 @@
 		D2C06E171B5EC2D800C09998 /* Trail.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06E161B5EC2D800C09998 /* Trail.m */; };
 		D2C06E1A1B5EC2EA00C09998 /* TrailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06E191B5EC2EA00C09998 /* TrailController.m */; };
 		D2C06E1D1B5EC30600C09998 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C06E1C1B5EC30600C09998 /* DetailViewController.m */; };
+		D2EF43271BC95E0A004CFF52 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF43261BC95E0A004CFF52 /* CoreLocation.framework */; };
+		D2EF43291BC95E1C004CFF52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF43281BC95E1C004CFF52 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		D2C06E191B5EC2EA00C09998 /* TrailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailController.m; sourceTree = "<group>"; };
 		D2C06E1B1B5EC30600C09998 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D2C06E1C1B5EC30600C09998 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D2EF43261BC95E0A004CFF52 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D2EF43281BC95E1C004CFF52 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EF43291BC95E1C004CFF52 /* MapKit.framework in Frameworks */,
+				D2EF43271BC95E0A004CFF52 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,8 @@
 		D2C06DE31B5EC29500C09998 = {
 			isa = PBXGroup;
 			children = (
+				D2EF43281BC95E1C004CFF52 /* MapKit.framework */,
+				D2EF43261BC95E0A004CFF52 /* CoreLocation.framework */,
 				D2C06DEE1B5EC29500C09998 /* FindMyTrail */,
 				D2C06E081B5EC29500C09998 /* FindMyTrailTests */,
 				D2C06DED1B5EC29500C09998 /* Products */,
@@ -192,6 +200,7 @@
 					};
 					D2C06E041B5EC29500C09998 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5XL94NV2G5;
 						TestTargetID = D2C06DEB1B5EC29500C09998;
 					};
 				};
@@ -400,6 +409,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -411,6 +422,7 @@
 				INFOPLIST_FILE = FindMyTrailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyTrail.app/FindMyTrail";
 			};
 			name = Debug;
@@ -419,6 +431,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -426,6 +440,7 @@
 				INFOPLIST_FILE = FindMyTrailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyTrail.app/FindMyTrail";
 			};
 			name = Release;
@@ -485,6 +500,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -492,6 +509,7 @@
 				INFOPLIST_FILE = FindMyTrailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyTrail.app/FindMyTrail";
 			};
 			name = "Release copy";

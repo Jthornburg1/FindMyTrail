@@ -23,8 +23,10 @@
         self.described = dict[@"description"];
         self.directions = dict[@"directions"];
         self.activities = dict[@"activity_type_name"];
+
     }
     return self;
 }
+
 
 @end

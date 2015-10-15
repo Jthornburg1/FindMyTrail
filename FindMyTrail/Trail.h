@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface Trail : NSObject
 
@@ -19,6 +20,8 @@
 @property (strong, nonatomic) NSString *described;
 @property (strong, nonatomic) NSString *directions;
 @property (strong, nonatomic) NSString *activities;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
+
 
 @end

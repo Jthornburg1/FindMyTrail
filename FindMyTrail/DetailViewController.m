@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     [self updateWithTrail:self.trail];
+    NSLog(@"coordinates of %@ are %f latitude and %f longitude.", self.trail, [self.trail.latitude doubleValue], [self.trail.longitude doubleValue]);
 }
 
 - (void)updateWithTrail:(Trail *)trail

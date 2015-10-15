@@ -10,6 +10,7 @@
 #import "TrailController.h"
 #import "DetailViewController.h"
 #import "TrailCell.h"
+#import <AddressBook/AddressBook.h>
 
 @interface TrailViewController ()<UITableViewDataSource, UITextFieldDelegate>
 
@@ -75,6 +76,8 @@
     TrailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"trailCell"];
     
     Trail *trail = self.trails[indexPath.row];
+    
+    cell.trail = trail;
     
     cell.trailNameLabel.text = trail.name;
     
