@@ -12,7 +12,7 @@
 
 - (void)trailByCity:(NSString *)city completion:(void (^)(NSArray *))completion
 {
-    city = [city stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    city = [city stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://outdoor-data-api.herokuapp.com/api.json?api_key=d6d33ee90666c461d901c731cc104b79&q[city_cont]=%@", city]];
     
@@ -20,16 +20,22 @@
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSArray *trails = [[NSJSONSerialization JSONObjectWithData:data options:0 error:nil] objectForKey:@"places"];
         
-        NSLog(@"%@", error);
+        //NSLog(@"%@", error);
         
         NSMutableArray *convertedTrails = [NSMutableArray new];
         
-        NSLog(@"%@", trails);
+        //NSLog(@"%@", trails);
+        //NSLog(@"%@", trails[2][@"activities"][0][@"activity_type_name"]);
+        //NSLog(@"%@", trails[2][@"activities"][0][@"thumbnail"]);
         
         for (NSDictionary *dictionary in trails) {
-            Trail *trail = [[Trail alloc] initWithDictionary:dictionary];
+            int i = 0;
             
+            Trail *trail = [[Trail alloc] initWithDictionary:dictionary];
+            trail.activities = trails[i][@"activities"][0][@"activity_type_name"];
+            trail.thumbnail = trails[i][@"activities"][0][@"thumbnail"];
             [convertedTrails addObject:trail];
+            i++;
         }
         
         completion(convertedTrails);

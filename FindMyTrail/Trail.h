@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSString *described;
 @property (strong, nonatomic) NSString *directions;
 @property (strong, nonatomic) NSString *activities;
+@property (strong, nonatomic) NSString *thumbnail;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 

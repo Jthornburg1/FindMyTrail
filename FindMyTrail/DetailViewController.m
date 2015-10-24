@@ -21,6 +21,7 @@
     
     [self updateWithTrail:self.trail];
     NSLog(@"coordinates of %@ are %f latitude and %f longitude.", self.trail, [self.trail.latitude doubleValue], [self.trail.longitude doubleValue]);
+    self.activityLabel.text = [NSString stringWithFormat:@"%@ is most commonly used for %@", self.trail.name, self.trail.activities];
 }
 
 - (void)updateWithTrail:(Trail *)trail
@@ -32,6 +33,7 @@
         self.textView1.text = [NSString stringWithFormat:@"Directions to %@:", self.trail.name];
         self.textView2.text = self.trail.directions;
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

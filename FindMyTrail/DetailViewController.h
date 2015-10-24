@@ -12,5 +12,6 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Trail *trail;
+@property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 
 @end

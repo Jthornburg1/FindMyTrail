@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Trail.h"
+#import "TrailController.h"
 
 @interface TrailCell : UITableViewCell<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *trailNameLabel;
