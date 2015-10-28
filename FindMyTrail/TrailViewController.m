@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.cellImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"WasatchStru"], [UIImage imageNamed:@"bigwhiteandgreen"], [UIImage imageNamed:@"earlyspring"], [UIImage imageNamed:@"fruita flowers"], [UIImage imageNamed:@"FruitaCanyon"], [UIImage imageNamed:@"redFlowers"], [UIImage imageNamed:@"SLCTrail"], [UIImage imageNamed:@"whiteandgreen"], nil];
+    self.cellImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"WasatchStru"], [UIImage imageNamed:@"bigwhiteandgreen"], [UIImage imageNamed:@"earlyspring"], [UIImage imageNamed:@"fruita flowers"], [UIImage imageNamed:@"FruitaCanyon"], [UIImage imageNamed:@"redFlowers"], [UIImage imageNamed:@"SLCTrail"], [UIImage imageNamed:@"whiteandgreen"], [UIImage imageNamed:@"Sacks"], [UIImage imageNamed:@"Goh"], nil];
     
 
 
@@ -87,6 +87,7 @@
         cell.cityLabel.text = [NSString stringWithFormat:@"%@", trail.state];
 
     }
+    
     
     cell.cellImage.image = self.cellImages[arc4random_uniform(self.cellImages.count)];
     

@@ -24,7 +24,6 @@
         
         NSMutableArray *convertedTrails = [NSMutableArray new];
         
-        //NSLog(@"%@", trails);
         //NSLog(@"%@", trails[2][@"activities"][0][@"activity_type_name"]);
         //NSLog(@"%@", trails[2][@"activities"][0][@"thumbnail"]);
         
@@ -32,7 +31,11 @@
             int i = 0;
             
             Trail *trail = [[Trail alloc] initWithDictionary:dictionary];
-            trail.activities = trails[i][@"activities"][0][@"activity_type_name"];
+            if (trails[i][@"activities"][0] == (id)[NSNull null]) {
+                trail.activities = @": none specified";
+            }else{
+                trail.activities = trails[i][@"activities"][0][@"activity_type_name"];
+            }
             trail.thumbnail = trails[i][@"activities"][0][@"thumbnail"];
             [convertedTrails addObject:trail];
             i++;
